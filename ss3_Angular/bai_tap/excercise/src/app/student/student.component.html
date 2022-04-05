@@ -1,0 +1,13 @@
+<h1>DANH SÁCH SINH VIÊN</h1>
+
+<span>Số Thứ Tự: {{student.id}}</span><br>
+<span>Họ Tên: {{student.name}}</span> <br>
+<span>Tuổi: {{student.age}}</span><br>
+<tr>Địa chỉ: {{student.address}}</tr>
+<tr>Điểm số: <span [style.color]="color">{{student.point}}</span>
+<input style="margin-left: 10px" type="number" #element (click)="changedPoint(element.value)">
+</tr>
+<tr>
+<span>Nhập màu của bạn: </span>
+<input style="margin-top: 10px" type="text" #colors value="red" (change)="changedColor(colors.value)">
+</tr>
