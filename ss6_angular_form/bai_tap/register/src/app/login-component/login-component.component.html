@@ -1,0 +1,42 @@
+<div class="materialContainer" >
+
+  <form [formGroup]="createLoginForm" (ngSubmit)="onSubmit(createLoginForm)" novalidate>
+    <div class="box">
+    <div class="title">LOGIN</div>
+
+    <div class="input">
+      <label for="emails">Email</label>
+      <input type="email" name="emails" id="emails" formControlName="emails">
+      <span class="spin"></span>
+    </div>
+      <div
+        *ngIf="createLoginForm.get('emails').errors?.required &&  createLoginForm.get('emails').touched" style="color: red">
+        Vui lòng không được để trống!
+      </div>
+      <div
+        *ngIf="createLoginForm.get('emails').errors?.email &&  createLoginForm.get('emails').touched" style="color: red">
+        Vui lòng nhập đúng định dạng! (..@gmail.com)
+      </div>
+    <div class="input">
+      <label for="pass">Password</label>
+      <input type="password" name="passwords" id="pass" formControlName="passwords">
+      <span class="spin"></span>
+    </div>
+      <div
+        *ngIf="createLoginForm.get('passwords').errors?.required &&  createLoginForm.get('passwords').touched" style="color: red">
+        Vui lòng không được để trống!
+      </div>
+      <div
+        *ngIf="createLoginForm.get('passwords').errors?.minlength &&  createLoginForm.get('passwords').touched" style="color: red">
+        Vui lòng nhập đúng định dạng!
+      </div>
+
+    <div class="button login">
+      <button><span>GO</span> <i class="fa fa-check"></i></button>
+    </div>
+
+    <a href="" class="pass-forgot">Forgot your password?</a>
+
+  </div>
+  </form>
+</div>

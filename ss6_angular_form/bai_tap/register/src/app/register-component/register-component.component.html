@@ -1,0 +1,103 @@
+<h1 style="margin-top: 50px">Đăng ký</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <form [formGroup]="createRegisterForm" (ngSubmit)="onSubmit(createRegisterForm)" novalidate>
+        <div class="mb-3">
+          <label for="exampleEmail" class="form-label">Email</label>
+          <input formControlName="email" name="email" type="email" class="form-control" id="exampleEmail">
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('email').errors?.required &&  createRegisterForm.get('email').touched" style="color: red">
+          Vui lòng không được để trống!
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('email').errors?.email &&  createRegisterForm.get('email').touched" style="color: red">
+          Vui lòng nhập đúng định dạng! (..@gmail.com)
+        </div>
+
+        <div formGroupName="passWordGroup">
+        <div class="mb-3">
+          <label for="examplePassword" class="form-label">Password</label>
+          <input formControlName="passwords" name="passwords" type="password" class="form-control" id="examplePassword">
+          <!--          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+        </div>
+        <div
+          *ngIf="passwords?.errors?.required &&  passwords.touched" style="color: red">
+          Vui lòng Không được để trống!
+        </div>
+        <div
+          *ngIf="passwords?.errors?.minlength &&  passwords.touched" style="color: red">
+          Vui lòng nhập đúng định dạng!
+        </div>
+        <div class="mb-3">
+          <label for="exampleConfirm" class="form-label">Confirm Password</label>
+          <input formControlName="confirmPasswords" name="confirmPasswords" type="password" class="form-control" id="exampleConfirm">
+        </div>
+        <div
+          *ngIf="confirmPasswords?.errors?.required &&  confirmPasswords.touched" style="color: red">
+          Vui lòng Không được để trống!
+        </div>
+        <div
+          *ngIf="createRegisterForm.hasError('passwordNotMatch',['passWordGroup']) &&  confirmPasswords.touched" style="color: red">
+          Vui lòng nhập giống mật k!
+        </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleCountry" class="form-label">Country</label>
+          <select id="exampleCountry" name="country" formControlName="country" >
+            <option value="">----Chọn----</option>
+            <option [ngValue]="c.id" *ngFor="let c of countryList">{{c.name}}</option>
+          </select>
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('country').errors?.required &&  createRegisterForm.get('country').touched" style="color: red">
+          Vui lòng không để trống!
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleAge" class="form-label">Age</label>
+          <input formControlName="dayOfBirth" name="dayOfBirth" type="date" class="form-control" id="exampleAge">
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('dayOfBirth').hasError('ageUnder') && createRegisterForm.get('dayOfBirth').touched" style="color: red">
+          Rất tiếc bạn chưa đủ 18 tuổi!
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('dayOfBirth').errors?.required &&  createRegisterForm.get('dayOfBirth').touched" style="color: red">
+          Vui lòng chọn ngày!
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Genger</label>
+            <input type="radio"  name="gender" formControlName="gender" value="nam"/>Nam
+            <input type="radio"  name="gender" formControlName="gender" value="nữ"/>Nữ
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('gender').errors?.required &&  createRegisterForm.get('gender').touched">
+          Vui lòng Không được để trống!
+        </div>
+        <div class="mb-3">
+          <label for="examplePhone" class="form-label">Phone</label>
+          <input formControlName="phone" name="phone" type="text" class="form-control" id="examplePhone">
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('phone').errors?.required &&  createRegisterForm.get('phone').touched" style="color: red">
+          Vui lòng Không được để trống!
+        </div>
+        <div
+          *ngIf="createRegisterForm.get('phone').errors?.pattern &&  createRegisterForm.get('phone').touched" style="color: red">
+          Vui lòng nhập số điện thoại bắt đầu là +84 và 9 hoặc 10 chữ số!
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!createRegisterForm.valid">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
