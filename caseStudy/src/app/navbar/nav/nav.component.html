@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <a class="navbar-brand" routerLink="">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/employee">NHÂN VIÊN<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/customer">KHÁCH HÀNG</a>
+      </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" routerLink="/service" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          DỊCH VỤ
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#" routerLink="/room">PHÒNG</a></li>
+          <li><a class="dropdown-item" href="#" routerLink="/villa">VILLA</a></li>
+          <li><a class="dropdown-item" href="#" routerLink="/house">CĂN HỘ</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"  onclick="'javascript:createService(' + ${customer.id} + ')'" routerLink="/service">THÊM MỚI</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contract">HỢP ĐỒNG</a>
+      <li class="nav-item">
+        <a class="nav-link">GIẢI TRÍ</a>
+      <li class="nav-item">
+        <a class="nav-link">ĐIỂM ĐẾN</a>
+      <li class="nav-item">
+        <a class="nav-link">ƯU ĐÃI</a>
+      </li>
+      <li class="nav-item" style="margin-left: 350px">
+        <a class="nav-link" routerLink="/login">ĐĂNG NHẬP</a>
+      </li>
+    </ul>
+
+
+  </div>
+</nav>
+
+
+<!--modal tao moi-->
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">THÊM MỚI</h4>
+        <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+          <span aria-hidden="true" routerLink="/service">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Tên Dịch Vụ</label>
+<!--          <i class="fas fa-user prefix grey-text"></i>-->
+          <input type="text" id="orangeForm-name" class="form-control validate">
+
+        </div>
+        <div class="md-form mb-5">
+<!--          <i class="fas fa-envelope prefix grey-text"></i>-->
+          <label data-error="wrong" data-success="right" for="orangeForm-area">Diện Tích Sử Dụng</label>
+          <input type="text" id="orangeForm-area" class="form-control validate">
+
+        </div>
+        <div class="md-form mb-5">
+<!--          <i class="fas fa-envelope prefix grey-text"></i>-->
+          <label data-error="wrong" data-success="right" for="orangeForm-cost">Chi Phí Thuê</label>
+          <input type="text" id="orangeForm-cost" class="form-control validate">
+
+        </div>
+        <div class="md-form mb-5">
+<!--          <i class="fas fa-envelope prefix grey-text"></i>-->
+          <label data-error="wrong" data-success="right" for="orangeForm-number">Số Lượng Tối Đa</label>
+          <input type="text" id="orangeForm-number" class="form-control validate">
+
+        </div>
+
+        <div class="md-form mb-4">
+          <label data-error="wrong" data-success="right" >Kiểu thuê</label>
+          <select name="" id="">
+            <option value="năm">Năm</option>
+            <option value="tháng">Tháng</option>
+            <option value="ngày">Ngày</option>
+            <option value="giờ">Giờ</option>
+<!--          <i class="fas fa-lock prefix grey-text"></i>-->
+<!--          <input type="password" id="orangeForm-pass" class="form-control validate">-->
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function createService(id) {
+    document.getElementById("id-customer").value = id;
+// document.getElementById("customer_name").innerText = name;
+  }
+</script>

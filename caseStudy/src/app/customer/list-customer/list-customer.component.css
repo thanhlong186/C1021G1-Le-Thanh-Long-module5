@@ -1,0 +1,15 @@
+.table th{
+    background-color: orange;
+  text-align: center;
+
+}
+.table tr:hover{
+  /*background-color: green;*/
+}
+h1{
+  text-align: center;
+  font-family: "Times New Roman";
+}
+td{
+  text-align: center;
+}

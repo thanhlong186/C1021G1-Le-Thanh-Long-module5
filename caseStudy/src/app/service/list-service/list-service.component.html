@@ -1,0 +1,152 @@
+<div class="container-fuild" style="margin-bottom: 50px">
+  <div class="border-12">
+    <img src="https://lalyanasensesworlds.com/wp-content/uploads/2020/03/lalyana-senses-world.jpg" alt="">
+  </div>
+
+</div>
+
+<!-- tạo card sản phẩm-->
+<div class="container-fluid" style="margin-bottom: 20px">
+  <div class="row d-flex">
+    <div  class="col-md-4 ">
+
+      <div class="card mb-3">
+        <img height="300px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OCEAN SUITE</h5>
+          <p class="card-text">Room size: 85.8m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+
+      <div class="card">
+        <img height="300px" src="https://dulichso.vn/wp-content/uploads/2019/12/cap-nhat-gi-225-ph-242-ng-furama-resort-224-nang-2019-k-232-m-voucher-uu-227-i-464.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OCEAN STUDIO SUITE</h5>
+          <p class="card-text">Room size: 40.1m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+
+      <div class="card" >
+        <img height="300px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OCEAN DELUXE</h5>
+          <p class="card-text">Room size: 43.7m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+
+      <div class="card">
+        <img height="300px" src="https://resortdanang.info/wp-content/uploads/2018/12/twins-bed-lagoon-superior-furama-da-nang-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LANGOON SUPERIOR</h5>
+          <p class="card-text">Room size: 40.1m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+
+      <div class="card" >
+        <img height="300px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Garden-Superior-TwinBed-1_M2-1047x563.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GARDEN SUPERIOR</h5>
+          <p class="card-text">Room size: 40.1m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+
+      <div class="card">
+        <img height="300px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M2-1047x563.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GARDEN DELUXE</h5>
+          <p class="card-text">Room size: 43.7m<sup>2</sup></p>
+          <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+<!--          <a routerLink="/delete" class="btn btn-primary" style="margin-left: 5px">Xóa</a>-->
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'" style="margin-left: 5px">Xóa</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Dịch Vụ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" routerLink="/delete">
+        <p>Bạn có muốn xóa dịch vụ này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+        <button type="button" class="btn btn-primary">Có</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function deleteCustomer(id) {
+    document.getElementById("id-customer").value = id;
+// document.getElementById("customer_name").innerText = name;
+  }
+</script>
+
+
+
+<!--Phân Trang-->
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
+    Modal Register Form</a>
+</div>
+
+<div class="wpb_wrapper"><h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal;" class="vc_custom_heading">DỊCH VỤ &amp; CƠ SỞ VẬT CHẤT</h2>
+  <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+  <div class="wpb_text_column wpb_content_element ">
+    <div class="wpb_wrapper">
+      <p style="text-align: center;">Có nhiều những gói nghỉ dưỡng phù hợp cho cả những kỳ nghỉ ngắn hay dài ngày</p>
+
+    </div>
+  </div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div>

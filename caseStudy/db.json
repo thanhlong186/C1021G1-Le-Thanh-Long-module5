@@ -1,0 +1,400 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "customerList": [
+    {
+      "id": 2,
+      "code": "KH-0001",
+      "name": "Lê Văn Khánh",
+      "dayOfBirth": "18-07-2001",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "KhanhLe@gmail.com",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh"
+    },
+    {
+      "id": 3,
+      "code": "KH-0002",
+      "name": "Hồ Hiếu Nghĩa",
+      "dayOfBirth": "21-12-1997",
+      "gender": "Nam",
+      "idCard": "0480945145",
+      "phone": "0905489532",
+      "emails": "HieuHo@gmail.com",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "address": "Số 120, đường Tôn Đản, Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "code": "KH-0003",
+      "name": "Hồ Hiếu Thảo",
+      "dayOfBirth": "21-12-1997",
+      "gender": "Nam",
+      "idCard": "0480945145",
+      "phone": "0905489532",
+      "emails": "HieuHo@gmail.com",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "address": "Số 120, đường Tôn Đản, Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "code": "KH-0004",
+      "name": "Hồ Hiếu Trọng",
+      "dayOfBirth": "21-12-1997",
+      "gender": "Nam",
+      "idCard": "0480945145",
+      "phone": "0905489532",
+      "emails": "HieuHo@gmail.com",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "address": "Số 120, đường Trường Chinh, Đà Nẵng"
+    },
+    {
+      "id": 6,
+      "code": "KH-0005",
+      "name": "Hồ Hiếu Tình",
+      "dayOfBirth": "21-01-1997",
+      "gender": "Nam",
+      "idCard": "0480945145",
+      "phone": "0905489532",
+      "emails": "HieuTinh@gmail.com",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "address": "Số 160, đường Cù Chính Lan, TP.HCM"
+    },
+    {
+      "code": "KH-0006",
+      "name": "Pham Duy Tuan",
+      "dayOfBirth": "1998-03-06",
+      "gender": "nam",
+      "idCard": "048009874",
+      "phone": "0908765234",
+      "emails": "thanhlong@gmail.com",
+      "address": "Đà Nẵng,  Việt Nam",
+      "typeCustomer": {
+        "id": 4,
+        "nameType": "Silver"
+      },
+      "id": 7
+    },
+    {
+      "code": "KH-0007",
+      "name": "Pham Duy Tuan 2",
+      "dayOfBirth": "1998-02-12",
+      "gender": "nam",
+      "idCard": "048009874",
+      "phone": "0908765234",
+      "emails": "thanhlong@gmail.com",
+      "address": "Quảng Trị, Việt Nam",
+      "typeCustomer": {
+        "id": 3,
+        "nameType": "Gold"
+      },
+      "id": 8
+    },
+    {
+      "code": "KH-0009",
+      "name": "Micheal John",
+      "dayOfBirth": "1988-02-11",
+      "gender": "nam",
+      "idCard": "048001774",
+      "phone": "0905432567",
+      "emails": "JohnMicheal@gmail.com",
+      "address": "Australia",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "id": 10
+    },
+    {
+      "code": "KH-0009",
+      "name": "Dell",
+      "dayOfBirth": "1900-04-08",
+      "gender": "nam",
+      "idCard": "048001774",
+      "phone": "0352960270",
+      "emails": "JohnMicheal@gmail.com",
+      "address": "Đà Nẵng,  Việt Nam",
+      "typeCustomer": {
+        "id": 2,
+        "nameType": "Platinum"
+      },
+      "id": 11
+    }
+  ],
+  "customerTypeList": [
+    {
+      "id": 1,
+      "nameType": "Diamond"
+    },
+    {
+      "id": 2,
+      "nameType": "Platinum"
+    },
+    {
+      "id": 3,
+      "nameType": "Gold"
+    },
+    {
+      "id": 4,
+      "nameType": "Silver"
+    },
+    {
+      "id": 5,
+      "nameType": "Member"
+    }
+  ],
+  "employeeList": [
+    {
+      "id": 1,
+      "name": "Lê Văn Khánh",
+      "dayOfBirth": "18-07-2001",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "email": "KhanhLe@gmail.com",
+      "salary": "10000000",
+      "position": {
+        "id": 3,
+        "namePosition": "Chuyên viên"
+      },
+      "education": {
+        "id": 3,
+        "nameEducation": "Đại học"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Đào Bùi Xuân Thắng",
+      "dayOfBirth": "19-05-1995",
+      "idCard": "048096753",
+      "phone": "0903632754",
+      "email": "Thangbui95@gmail.com",
+      "salary": 20000000,
+      "position": {
+        "id": 5,
+        "namePosition": "Quản lý"
+      },
+      "education": {
+        "id": 3,
+        "nameEducation": "Đại học"
+      },
+      "division": {
+        "id": 3,
+        "nameDivision": "Quản lý"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Lê Thành Long",
+      "dayOfBirth": "18-02-1996",
+      "idCard": "048096753",
+      "phone": "0903632754",
+      "email": "ThanhLong96@gmail.com",
+      "salary": 25000000,
+      "position": {
+        "id": 6,
+        "namePosition": "Giám đốc"
+      },
+      "education": {
+        "id": 4,
+        "nameEducation": "Sau Đại học"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Nguyễn Hùng Sơn",
+      "dayOfBirth": "25-02-1995",
+      "idCard": "048096753",
+      "phone": "0903632754",
+      "email": "Hungson95@gmail.com",
+      "salary": 15000000,
+      "position": {
+        "id": 5,
+        "namePosition": "Quản lý"
+      },
+      "education": {
+        "id": 4,
+        "nameEducation": "Đại học"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Phạm Duy Thuận",
+      "dayOfBirth": "12-12-2003",
+      "idCard": "048096753",
+      "phone": "0903632754",
+      "email": "ThuanPham1212@gmail.com",
+      "salary": 12000000,
+      "position": {
+        "id": 1,
+        "namePosition": "Lễ tân"
+      },
+      "education": {
+        "id": 2,
+        "nameEducation": "Cao đẳng"
+      },
+      "division": {
+        "id": 1,
+        "nameDivision": "Sale-Marketing"
+      }
+    },
+    {
+      "name": "Pham Duy Tuan",
+      "dayOfBirth": "1996-12-01",
+      "idCard": "048009874",
+      "phone": "0890532145",
+      "email": "Tuan@gmail.com",
+      "salary": "10000000",
+      "position": {
+        "id": 2,
+        "namePosition": "Phục vụ"
+      },
+      "education": {
+        "id": 2,
+        "nameEducation": "Cao đẳng"
+      },
+      "division": {
+        "id": 1,
+        "nameDivision": "Sale-Marketing"
+      },
+      "id": 8
+    },
+    {
+      "name": "Pham Duy Tuan",
+      "dayOfBirth": "2004-02-12",
+      "idCard": "048001774",
+      "phone": "0352960270",
+      "email": "TrongTran@codegym.com",
+      "salary": "10000000",
+      "position": {
+        "id": 2,
+        "namePosition": "Phục vụ"
+      },
+      "education": {
+        "id": 1,
+        "nameEducation": "Trung cấp"
+      },
+      "division": {
+        "id": 1,
+        "nameDivision": "Sale-Marketing"
+      },
+      "id": 9
+    },
+    {
+      "name": "Pham Duy Tuan 1",
+      "dayOfBirth": "1990-04-12",
+      "idCard": "048009874",
+      "phone": "+84123456789",
+      "email": "TrongTran@codegym.com",
+      "salary": "1000000",
+      "position": {
+        "id": 3,
+        "namePosition": "Chuyên viên"
+      },
+      "education": {
+        "id": 3,
+        "nameEducation": "Đại học"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      },
+      "id": 10
+    }
+  ],
+  "positionList": [
+    {
+      "id": 1,
+      "namePosition": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "namePosition": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "namePosition": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "namePosition": "Giám sát"
+    },
+    {
+      "id": 5,
+      "namePosition": "Quản lý"
+    },
+    {
+      "id": 6,
+      "namePosition": "Giám đốc"
+    }
+  ],
+  "educationList": [
+    {
+      "id": 1,
+      "nameEducation": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "nameEducation": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "nameEducation": "Đại học"
+    },
+    {
+      "id": 4,
+      "nameEducation": "Sau Đại học"
+    }
+  ],
+  "divisionList": [
+    {
+      "id": 1,
+      "nameDivision": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "nameDivision": "Hành chính"
+    },
+    {
+      "id": 3,
+      "nameDivision": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "nameDivision": "Quản lý"
+    }
+  ]
+}

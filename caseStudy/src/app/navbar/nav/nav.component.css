@@ -1,0 +1,17 @@
+.navbar-brand{
+  margin-left: 100px;
+}
+nav {
+  background-color: darkgreen;
+  position: sticky;
+
+}
+.nav-link{
+  color: white;
+  font-family: "Times New Roman";
+}
+.navbar-brand{
+  color: white;
+  font-family: "Times New Roman";
+}
+

@@ -1,0 +1,61 @@
+<h1>DANH SÁCH NHÂN VIÊN</h1>
+<!--<form  style="margin-left: 1200px; margin-bottom: 10px">-->
+  <a class="btn btn-success" routerLink="/create-employee" style="margin-left: 1200px; margin-bottom: 10px">Thêm mới Nhân Viên</a>
+<!--</form>-->
+<table class="table table-striped table-hover" border="1">
+  <thead>
+  <tr>
+    <th>Họ Tên</th>
+    <th>Ngày Sinh</th>
+    <th>Số CMND/CCCD</th>
+    <th>Số Điện Thoại</th>
+    <th>Email</th>
+    <th>Lương</th>
+    <th>Vị Trí</th>
+    <th>Trình Độ</th>
+    <th>Bộ Phận</th>
+    <th colSpan="2" style="text-align: center">Chức Năng Khác</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employeeList | paginate: { itemsPerPage: 3, currentPage: p }">
+    <td>{{employee.name}}</td>
+    <td>{{employee.dayOfBirth}}</td>
+    <td>{{employee.idCard}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.salary}}</td>
+    <td>{{employee.position.namePosition}}</td>
+    <td>{{employee.education.nameEducation}}</td>
+    <td>{{employee.division.nameDivision}}</td>
+    <td>
+      <!--    <a class="m-2 btn btn-success">Chi Tiết</a>-->
+      <!--    <a class="m-2 btn btn-primary">Sửa</a>-->
+      <a class="m-2 btn btn-primary">Sửa</a>
+      <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              (click)="getInfor(employee.id)" style="margin-left: 5px">Xóa</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Dịch Vụ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" routerLink="/delete">
+        <p>Bạn có muốn xóa <span style="color: red" *ngIf="employee">{{employee.name}}</span> này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteEmployee(employee.id)">Có</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="p=$event"></pagination-controls>

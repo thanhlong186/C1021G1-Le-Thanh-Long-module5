@@ -1,0 +1,51 @@
+<!--<div class="container">-->
+<!--<div class="row-cols-6">-->
+<!--<div class="login-box">-->
+<!--  <h2>Login</h2>-->
+<!--  <form [formGroup]="createFormLogin">-->
+<!--    <div class="user-box">-->
+<!--      <input type="text" name="" required="">-->
+<!--      <label>Username</label>-->
+<!--    </div>-->
+<!--    <div class="user-box">-->
+<!--      <input type="password" name="" required="">-->
+<!--      <label>Password</label>-->
+<!--    </div>-->
+<!--    <a href="#">-->
+<!--      <span></span>-->
+<!--      <span></span>-->
+<!--      <span></span>-->
+<!--      <span></span>-->
+<!--      Submit-->
+<!--    </a>-->
+<!--  </form>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="login">
+  <h2 class="active"> đăng nhập </h2>
+
+  <h2 class="nonactive"> đăng ký </h2>
+  <form [formGroup]="createFormLogin">
+    <input type="text" class="text" name="username">
+    <span>Tên đăng nhập</span>
+    <br>
+    <br>
+
+    <input type="password" class="text" name="password">
+    <span>Mật khẩu</span>
+    <br>
+    <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+    <label for="checkbox-1-1">Lưu thông tin đăng nhập</label>
+
+    <button class="signin">
+      đăng nhập
+    </button>
+
+
+    <hr>
+
+    <a href="#">Bạn quên mật khẩu?</a>
+  </form>
+
+</div>
