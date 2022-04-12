@@ -5,6 +5,7 @@ import {YoutubePlaylistComponent} from './youtube/youtube-playlist/youtube-playl
 import {YoutubePlayerComponent} from './youtube/youtube-player/youtube-player.component';
 import {ProductListComponent} from './product/product-list/product-list.component';
 import {ProductCreateComponent} from './product/product-create/product-create.component';
+import {UpdateProductComponent} from './product/update-product/update-product.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
       component: YoutubePlayerComponent}]
   },
   {path:'product/list', component: ProductListComponent},
-  {path:'product/create', component: ProductCreateComponent}
+  {path:'product/create', component: ProductCreateComponent},
+  {path: 'product/edit/:id', component: UpdateProductComponent}
 ];
 
 @NgModule({

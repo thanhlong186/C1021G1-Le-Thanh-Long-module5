@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../product/model/Product';
+import {Product} from '../model/Product';
+
+
 
 
 @Injectable({
@@ -49,7 +51,7 @@ export class ProductService {
   }
 
   findById(id: number) {
-    for(let item of this.products){
+    for (let item of this.products){
       if (item.id === id) {
         return item;
       }
@@ -62,11 +64,12 @@ export class ProductService {
     });
   }
   updateProduct(id: number, data: Product){
-    for (let product of this.products) {
-      if (product.id == id){
-        this.products.splice(product.id, 0, data)
-      }
-    }
-    console.log(this.products);
+    console.log(133);
+    // for (let product of this.products) {
+    //   if (product.id == id){
+    //     this.products.splice(product.id, 0, data);
+    //   }
+    // }
+    // console.log(this.products);
   }
 }

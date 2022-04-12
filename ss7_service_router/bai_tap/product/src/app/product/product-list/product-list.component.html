@@ -12,8 +12,8 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
-    <td><a [routerLink]="['/product/edit', product.id]">Chỉnh sửa</a></td>
-<!--    <td><button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"-->
-<!--                style="margin-left: 5px" (click)="findById(products.id)">Xóa</button></td>-->
+    <td><a [routerLink]="['/edit/',product.id]">Chỉnh sửa</a></td>
+    <!--    <td><button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"-->
+    <!--                style="margin-left: 5px" (click)="findById(products.id)">Xóa</button></td>-->
   </tr>
 </table>
