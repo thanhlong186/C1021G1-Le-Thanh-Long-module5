@@ -18,12 +18,14 @@ export class ListCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadData();
+
   }
 
   loadData() {
     this.customerService.getListCustomer().subscribe(data => {
       this.customerList = data;
-      console.log('da lay duoc data');
+      console.log(data);
+      console.log('da lay duoc datafghg');
     }, error => {
       console.log('co loi khi lay data');
     });

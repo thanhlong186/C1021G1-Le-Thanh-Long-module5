@@ -37,4 +37,7 @@ export class EmployeeServiceService {
   deleteEmployee(idEmployee: number) {
     return this.http.delete(`${this.EMPLOYEE_URL}/` + idEmployee);
   }
+  updateEmployee(id: number, value: IEmployee) {
+    return this.http.put(`${this.EMPLOYEE_URL}/` + id, value);
+  }
 }

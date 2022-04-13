@@ -18,7 +18,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let employee of employeeList | paginate: { itemsPerPage: 3, currentPage: p }">
+  <tr *ngFor="let employee of employeeList | paginate: { itemsPerPage: 5, currentPage: p }">
     <td>{{employee.name}}</td>
     <td>{{employee.dayOfBirth}}</td>
     <td>{{employee.idCard}}</td>
@@ -31,8 +31,9 @@
     <td>
       <!--    <a class="m-2 btn btn-success">Chi Tiết</a>-->
       <!--    <a class="m-2 btn btn-primary">Sửa</a>-->
-      <a class="m-2 btn btn-primary">Sửa</a>
-      <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      <a class="m-2 btn btn-primary" routerLink="/edit-employee/{{employee.id}}">Sửa</a>
+
+      <button  class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
               (click)="getInfor(employee.id)" style="margin-left: 5px">Xóa</button>
     </td>
   </tr>
@@ -58,4 +59,9 @@
   </div>
 </div>
 
-<pagination-controls (pageChange)="p=$event"></pagination-controls>
+<pagination-controls
+  previousLabel="Quay lại"
+  nextLabel="Tiếp theo"
+  (pageChange)="p=$event">
+
+</pagination-controls>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-name-card"
+    }
+  },
+  "defaultProject": "angular-name-card",
+  "cli": {
+    "analytics": "35c1a408-71e0-461f-836d-64f430e4295c"
+  }
 }

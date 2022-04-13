@@ -18,7 +18,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 3, currentPage: p }">
+  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 5, currentPage: p }">
     <td>{{customer.code}}</td>
     <td>{{customer.name}}</td>
     <td>{{customer.dayOfBirth}}</td>
@@ -59,7 +59,9 @@
   </div>
 </div>
 
-<pagination-controls (pageChange)="p=$event"></pagination-controls>
+<pagination-controls
+  previousLabel="Quay lại"
+  nextLabel="Tiếp theo" (pageChange)="p=$event"></pagination-controls>
 
 <!--<script>-->
 <!--  function deleteCustomer(id) {-->

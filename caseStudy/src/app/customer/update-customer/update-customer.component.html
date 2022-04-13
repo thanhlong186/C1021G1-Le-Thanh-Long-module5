@@ -39,8 +39,8 @@
 
         <div class="mb-3">
           <label class="form-label">Giới Tính</label>
-          <input  type="radio"  name="gender" formControlName="gender" value="nam" style="margin-left: 10px"/>Nam
-          <input  type="radio"  name="gender" formControlName="gender" value="nữ"/>Nữ
+          <input  type="radio"  name="gender" formControlName="gender" value="Nam" style="margin-left: 10px"/>Nam
+          <input  type="radio"  name="gender" formControlName="gender" value="ữ"/>Nữ
         </div>
         <div
           *ngIf="editFormCustomer.get('gender').errors?.required &&  editFormCustomer.get('gender').touched" style="color: red">
@@ -101,8 +101,9 @@
 
         <div class="mb-3">
           <label for="exampleTypeCustomer" class="form-label">Loại Khách</label>
-          <select *ngIf="listType" class="form-select" aria-label="Default select example" name="typeCustomer" formControlName="typeCustomer" id="exampleTypeCustomer" style="margin-left: 10px">
-            <option [selected] [ngValue]="c" *ngFor="let c of listType">{{c.nameType}}</option>
+          <select  class="form-select"  name="typeCustomer" [(ngModel)]="customerType.id"  formControlName="typeCustomer" id="exampleTypeCustomer" style="margin-left: 10px">
+            <option [ngValue]="c.id"   *ngFor="let c of customerTypeList"
+                      >{{c.nameType}}</option>
           </select>
           <!--  <input type="password" class="form-control" id="exampleInputPassword1" >-->
         </div>

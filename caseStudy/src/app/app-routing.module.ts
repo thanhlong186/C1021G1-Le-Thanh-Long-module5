@@ -11,6 +11,7 @@ import {ContractComponent} from './contract/list-contract/contract.component';
 import {CreateEmployeeComponent} from './employee/create-employee/create-employee.component';
 import {LoginComponent} from './navbar/login/login.component';
 import {UpdateCustomerComponent} from './customer/update-customer/update-customer.component';
+import {UpdateEmployeeComponent} from './employee/update-employee/update-employee.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'edit-customer/:id', component: UpdateCustomerComponent},
   {path: 'employee', component: EmployeeComponent},
   {path: 'create-employee', component: CreateEmployeeComponent},
+  {path: 'edit-employee/:id', component: UpdateEmployeeComponent},
   {path: 'contract', component: ContractComponent},
   {path: 'login', component: LoginComponent}
 ];

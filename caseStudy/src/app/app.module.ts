@@ -23,6 +23,7 @@ import { UpdateCustomerComponent } from './customer/update-customer/update-custo
 import {NgxPaginationModule} from 'ngx-pagination';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UpdateEmployeeComponent } from './employee/update-employee/update-employee.component';
 
 
 function MAT_SNACK_BAR_DEFAULT_OPTIONS() {
@@ -46,6 +47,7 @@ function MAT_SNACK_BAR_DEFAULT_OPTIONS() {
     CreateEmployeeComponent,
     LoginComponent,
     UpdateCustomerComponent,
+    UpdateEmployeeComponent,
   ],
   imports: [
     BrowserModule,

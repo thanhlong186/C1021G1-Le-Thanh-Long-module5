@@ -39,8 +39,8 @@
 
   <div class="mb-3">
     <label class="form-label">Giới Tính</label>
-    <input  type="radio"  name="gender" formControlName="gender" value="nam" style="margin-left: 10px"/>Nam
-    <input  type="radio"  name="gender" formControlName="gender" value="nữ"/>Nữ
+    <input  type="radio"  name="gender" formControlName="gender" value="Nam" style="margin-left: 10px"/>Nam
+    <input  type="radio"  name="gender" formControlName="gender" value="Nữ"/>Nữ
   </div>
   <div
     *ngIf="createCustomerForm.get('gender').errors?.required &&  createCustomerForm.get('gender').touched" style="color: red">
