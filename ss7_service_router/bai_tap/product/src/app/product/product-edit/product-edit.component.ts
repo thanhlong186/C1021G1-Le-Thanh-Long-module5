@@ -21,26 +21,24 @@ export class ProductEditComponent implements OnInit {
   product: Product;
 
   constructor(private productService: ProductService,
-              private activated: ActivatedRoute) {
+              private activated: ActivatedRoute,
+              private router: Router) {
 
   }
 
   ngOnInit(): void {
     this.id = Number(this.activated.snapshot.paramMap.get('id'));
     this.product = this.productService.findById(this.id);
-    console.log(this.id);
-    console.log(this.product);
     this.productForm.setValue(this.productService.findById(this.id));
     console.log(this.productForm.value);
   }
 
 
   updateProduct() {
-    console.log("djaskjdklj");
+    // console.log("djaskjdklj");
     this.productService.updateProduct(this.id, this.productForm.value);
     console.log("đã Update dữ liệu");
-    // this.productForm.reset();
-    // this.router.navigateByUrl('');
+    this.router.navigateByUrl('');
   }
 
 }

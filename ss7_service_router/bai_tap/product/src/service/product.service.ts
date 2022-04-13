@@ -59,17 +59,23 @@ export class ProductService {
     // return this.products.find(product => product.id === id);
   }
   deleteProduct(id: number) {
-    this.products = this.products.filter(product => {
-      return product.id !== id;
-    });
+    for (let i in this.products) {
+      if(this.products[i].id == id) {
+        this.products.splice(+i, 1)
+        console.log(this.products);
+      }
+    }
   }
-  updateProduct(id: number, data: Product){
-    console.log(133);
-    // for (let product of this.products) {
-    //   if (product.id == id){
-    //     this.products.splice(product.id, 0, data);
-    //   }
-    // }
-    // console.log(this.products);
+  updateProduct(idProduct: number, data: Product){
+    console.log(data);
+    // console.log(133);
+    for (let i in this.products) {
+      if(this.products[i].id == idProduct) {
+        this.products[i]= data;
+        console.log(this.products);
+      }
+    }
+
   }
+  getInfo
 }

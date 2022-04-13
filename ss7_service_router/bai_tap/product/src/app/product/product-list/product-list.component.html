@@ -13,7 +13,26 @@
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
     <td><a [routerLink]="['/edit/',product.id]">Chỉnh sửa</a></td>
-    <!--    <td><button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"-->
-    <!--                style="margin-left: 5px" (click)="findById(products.id)">Xóa</button></td>-->
+        <td><button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="margin-left: 5px" (click)="findById(product.id)">Xóa</button></td>
   </tr>
 </table>
+
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Dịch Vụ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" routerLink="/delete">
+        <p>Bạn có muốn xóa <span style="color: red" *ngIf="product">{{product.name}}</span> này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="submitDelete()">Có</button>
+      </div>
+    </div>
+  </div>
+</div>

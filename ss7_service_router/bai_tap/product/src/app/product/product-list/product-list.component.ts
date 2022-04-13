@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
+  product: Product;
 
   constructor(private productService: ProductService,
               private router: Router) {
@@ -31,9 +32,15 @@ export class ProductListComponent implements OnInit {
     this.getAll();
   }
 
+  findById(id: number) {
+    this.product = this.productService.findById(id);
+    console.log(this.product);
 
-  // editProduct(id: number) {
-  //   this.router.navigate('edit/' + id);
-  //
-  // }
+  }
+
+
+  submitDelete() {
+    this.productService.deleteProduct(this.product.id);
+    this.ngOnInit();
+  }
 }
