@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ServiceCustomer} from '../service-customer';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {ICustomer} from '../model/ICustomer';
+import {CustomerType} from '../model/CustomerType';
 
 @Component({
   selector: 'app-update-customer',
@@ -11,10 +14,12 @@ import {ServiceCustomer} from '../service-customer';
 export class UpdateCustomerComponent implements OnInit {
 
   customerTypeList: any = [];
+  listType: CustomerType[];
 
   constructor(private router: Router,
               private active: ActivatedRoute,
-              private customerService: ServiceCustomer) { }
+              private customerService: ServiceCustomer,
+              private _snackBar: MatSnackBar) { }
 
   editFormCustomer = new FormGroup({
     id: new FormControl(''),
@@ -49,6 +54,13 @@ export class UpdateCustomerComponent implements OnInit {
       return {'ageUnder': true};
     }
     return null;
+  }
+  updateCustomer() {
+    this.customerService.updateCustomer(this.active.snapshot.params.id, this.editFormCustomer.value).subscribe(data =>{
+      console.log("đã cập nhập dữ liệu");
+      this.router.navigateByUrl("customer");
+      this._snackBar.open("Đã cập nhập thành công");
+    })
   }
 
 }

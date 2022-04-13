@@ -29,4 +29,7 @@ export class ServiceCustomer {
   createCustomer(data){
     return this.http.post<ICustomer>(this.API_URL, data);
   }
+  updateCustomer(id, data) {
+    return this.http.put(`${this.API_URL}/${id}`, data);
+  }
 }

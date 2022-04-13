@@ -21,10 +21,13 @@ import { CreateEmployeeComponent } from './employee/create-employee/create-emplo
 import { LoginComponent } from './navbar/login/login.component';
 import { UpdateCustomerComponent } from './customer/update-customer/update-customer.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
+function MAT_SNACK_BAR_DEFAULT_OPTIONS() {
 
-
+}
 
 @NgModule({
   declarations: [
@@ -49,9 +52,13 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

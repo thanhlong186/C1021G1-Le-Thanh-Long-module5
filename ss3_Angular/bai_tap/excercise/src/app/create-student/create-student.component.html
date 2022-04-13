@@ -1,0 +1,61 @@
+<h1 style="margin-top: 50px">Tạo mới Sinh Viên</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-">
+      <form [formGroup]="createStudentForm" (ngSubmit)="onSubmit(createStudentForm)">
+        <div class="mb-3">
+          <label for="exampleId" class="form-label">Số Thứ Tự</label>
+          <input formControlName="id" name="id" type="text" class="form-control" id="exampleId">
+        </div>
+        <div
+          *ngIf="createStudentForm.controls.id?.invalid &&  createStudentForm.controls.id?.touched">
+          Vui lòng không được để trống!
+        </div>
+        <div class="mb-3">
+          <label for="exampleName" class="form-label">Tên Sinh Viên</label>
+          <input formControlName="name" name="name" type="text" class="form-control" id="exampleName">
+<!--          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+        </div>
+        <div
+          *ngIf="createStudentForm.controls.name?.invalid &&  createStudentForm.controls.name?.touched">
+          Vui lòng Không được để trống!
+          Vui lòng không nhập quá 20 ký tự.
+        </div>
+        <div class="mb-3">
+          <label for="exampleAge" class="form-label">Tuổi</label>
+          <input formControlName="age" name="age" type="text" class="form-control" id="exampleAge">
+        </div>
+        <div
+          *ngIf="createStudentForm.controls.age?.invalid &&  createStudentForm.controls.age?.touched">
+          Vui lòng Không được để trống!
+          Độ tuổi của bạn phải lớn hơn 20.
+        </div>
+        <div class="mb-3">
+          <label for="examplePoint" class="form-label">Điểm</label>
+          <input formControlName="point" name="point" type="text" class="form-control" id="examplePoint">
+        </div>
+        <div
+          *ngIf="createStudentForm.controls.point?.invalid &&  createStudentForm.controls.point?.touched">
+          Vui lòng Không được để trống!
+            Điểm không được để số âm.
+        </div>
+        <div class="mb-3">
+          <label for="exampleAddress" class="form-label">Địa Chỉ</label>
+          <input formControlName="address" name="address" type="text" class="form-control" id="exampleAddress">
+        </div>
+        <div
+          *ngIf="createStudentForm.controls.address?.invalid &&  createStudentForm.controls.address?.touched">
+          Vui lòng Không được để trống!
+          Vui lòng không nhập quá 50 ký tự.
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="createStudentForm.invalid">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>

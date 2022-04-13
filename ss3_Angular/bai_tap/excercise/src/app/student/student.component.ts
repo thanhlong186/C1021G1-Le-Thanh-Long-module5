@@ -1,5 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {IStudent} from '../IStudent';
+import {StudentDao} from '../StudentDao';
+
+
 
 @Component({
   selector: 'app-student',
@@ -7,23 +10,27 @@ import {IStudent} from '../IStudent';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  student: IStudent = {
-    id: 1,
-    name: 'Long',
-    age: 25,
-    address: 'Bắc Băng Dương',
-    point: 10
-  };
+
+
+  studentNew: IStudent;
+  getValue(value: IStudent){
+    this.studentNew = value;
+    console.log(value);
+    console.log(this.studentNew);
+  }
+
+  student: IStudent[] = StudentDao.student;
     color: string;
   constructor() {
   }
 
   ngOnInit(): void {
   }
-  changedPoint(value) {
-    this.student.point = value;
-  }
+  // changedPoint(value) {
+  //   this.student.point = value;
+  // }
+
   changedColor(color: string) {
-    this.color = color;
+    this.color   = color;
   }
 }

@@ -27,10 +27,10 @@ export class ProductEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = Number(this.activated.snapshot.paramMap.get('id'));
-    this.product = this.productService.findById(this.id);
-    this.productForm.setValue(this.productService.findById(this.id));
-    console.log(this.productForm.value);
+    // this.id = Number(this.activated.snapshot.paramMap.get('id'));
+    // this.product = this.productService.findById(this.id);
+    // this.productForm.setValue(this.productService.findById(this.id));
+    // console.log(this.productForm.value);
   }
 
 
