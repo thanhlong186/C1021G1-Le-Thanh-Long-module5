@@ -101,9 +101,10 @@
 
         <div class="mb-3">
           <label for="exampleTypeCustomer" class="form-label">Loại Khách</label>
-          <select  class="form-select"  name="typeCustomer" [(ngModel)]="customerType.id"  formControlName="typeCustomer" id="exampleTypeCustomer" style="margin-left: 10px">
-            <option [ngValue]="c.id"   *ngFor="let c of customerTypeList"
-                      >{{c.nameType}}</option>
+          <select  class="form-select"  name="typeCustomer"
+                   formControlName="typeCustomer" id="exampleTypeCustomer" style="margin-left: 10px">
+            <option [ngValue]="c"    *ngFor="let c of customerTypeList"
+                    [selected]="editFormCustomer.get('typeCustomer')?.value.id == c.id">{{c.nameType}}</option>
           </select>
           <!--  <input type="password" class="form-control" id="exampleInputPassword1" >-->
         </div>
@@ -116,7 +117,7 @@
         <!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
         <!--  </div>-->
         <button type="submit" class="btn btn-primary" (click)="updateCustomer()">Submit</button>
-        <!--  routerLink="/customer"-->
+          <a routerLink="/customer" class="btn btn-secondary" style="margin-left: 5px">Hủy</a>
       </form>
     </div>
     <div class="col-3"></div>

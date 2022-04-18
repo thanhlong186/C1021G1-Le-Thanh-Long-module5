@@ -10,7 +10,7 @@
     <th>Số CMND/CCCD</th>
     <th>Số Điện Thoại</th>
     <th>Email</th>
-    <th>Lương</th>
+    <th>Lương(VND)</th>
     <th>Vị Trí</th>
     <th>Trình Độ</th>
     <th>Bộ Phận</th>
@@ -19,12 +19,12 @@
   </thead>
   <tbody>
   <tr *ngFor="let employee of employeeList | paginate: { itemsPerPage: 5, currentPage: p }">
-    <td>{{employee.name}}</td>
-    <td>{{employee.dayOfBirth}}</td>
+    <td>{{employee.name | titlecase}}</td>
+    <td>{{employee.dayOfBirth | date:"dd-MM-yyyy"}}</td>
     <td>{{employee.idCard}}</td>
     <td>{{employee.phone}}</td>
     <td>{{employee.email}}</td>
-    <td>{{employee.salary}}</td>
+    <td>{{employee.salary}} </td>
     <td>{{employee.position.namePosition}}</td>
     <td>{{employee.education.nameEducation}}</td>
     <td>{{employee.division.nameDivision}}</td>

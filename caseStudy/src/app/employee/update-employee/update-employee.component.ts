@@ -14,8 +14,12 @@ import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/form
 })
 export class UpdateEmployeeComponent implements OnInit {
   divisionList: DivisionList[];
+  divisions: DivisionList;
   educationList: EducationDegreeList[];
+  educations: EducationDegreeList;
   positionList: PositionList[];
+  positions: PositionList;
+
 
   constructor(private employeeService: EmployeeServiceService,
               private router: Router,
@@ -36,9 +40,6 @@ export class UpdateEmployeeComponent implements OnInit {
   })
 
   ngOnInit(): void {
-    this.employeeService.getInforEmployee(this.activated.snapshot.params.id).subscribe(data => {
-      this.editEmployeeForm.setValue(data);
-    });
     this.employeeService.getListPosition().subscribe(data => {
       this.positionList = data;
     });
@@ -47,7 +48,13 @@ export class UpdateEmployeeComponent implements OnInit {
     });
     this.employeeService.getListDivision().subscribe(data => {
       this.divisionList = data;
-  });
+    });
+    this.employeeService.getInforEmployee(this.activated.snapshot.params.id).subscribe(data => {
+      this.editEmployeeForm.setValue(data);
+      this.divisions = this.editEmployeeForm.get('division').value;
+      console.log(data);
+    });
+
   }
 
   getAllDivisionList() {
@@ -84,7 +91,9 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employeeService.updateEmployee(this.activated.snapshot.params.id, this.editEmployeeForm.value).subscribe(() => {
       console.log("Đã lấy dữ liệu thành công");
       this.router.navigateByUrl('employee');
-      this.snackBar.open("Đã cấp nhật thành công")
+      this.snackBar.open("Đã cập nhật thành công", '', {
+        duration:2000
+      })
       }
     )
   }

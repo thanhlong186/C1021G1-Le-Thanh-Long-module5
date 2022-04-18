@@ -3,6 +3,7 @@ import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/form
 import {ServiceCustomer} from '../service-customer';
 import {CustomerType} from '../model/CustomerType';
 import {Router} from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-customer',
@@ -13,7 +14,8 @@ export class CustomerComponent implements OnInit {
   // createCustomerForm: FormGroup;
   listType: CustomerType[];
 
-  constructor(private serviceCustomer: ServiceCustomer, private router: Router) {
+  constructor(private serviceCustomer: ServiceCustomer, private router: Router,
+              private snackBar: MatSnackBar) {
   }
 
 
@@ -66,6 +68,9 @@ export class CustomerComponent implements OnInit {
       this.serviceCustomer.createCustomer(this.createCustomerForm.value).subscribe(() => {
         console.log('đã lấy được data');
         this.router.navigateByUrl("customer");
+        this.snackBar.open("Đã thêm mới thành công", '', {
+          duration:2000
+        })
       });
       console.log(this.createCustomerForm.value);
     }

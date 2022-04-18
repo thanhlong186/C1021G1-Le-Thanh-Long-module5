@@ -1,0 +1,78 @@
+<div class="container-fuild" style="margin-bottom: 50px">
+  <div class="border-12">
+    <img style="width: 100%" src="https://lalyanasensesworlds.com/wp-content/uploads/2020/03/lalyana-senses-world.jpg" alt="">
+  </div>
+
+</div>
+
+<!-- tạo card sản phẩm-->
+<div class="container-fluid" style="margin-top: 50px">
+    <div class="row d-flex">
+      <div class="col-md-4" *ngFor="let facility of facilityList | paginate: { itemsPerPage: 6, currentPage: p }">
+    <div class="card" style="width: 28rem; " >
+      <img style="width: 100%; height: 300px"
+        src="{{facility.img}}"
+        class="card-img-top" alt="...">
+      <div class="card-body list-group-item-secondary">
+        <h5 class="card-title mx-3">{{facility.name}}</h5>
+        <div class="d-flex ">
+          <div class="col-6 text-left">
+            <p class="card-text">Room size:{{facility.area}} m<sup>2</sup></p>
+            <a routerLink="/edit" class="btn btn-primary" >Sửa</a>
+                      <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                              (click)="deleteCard(facility.id)" style="margin-left: 5px">Xóa</button>
+                      <a routerLink="/edit" class="btn btn-warning" style="margin-left: 5px" >Chi tiết</a>
+          </div>
+          <div class="col-6 text-right">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!--Phân Trang-->
+<pagination-controls style="margin-bottom: 5px"
+  previousLabel="Quay lại"
+  nextLabel="Tiếp theo" (pageChange)="p=$event"></pagination-controls>
+
+
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Dịch Vụ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" routerLink="/delete">
+        <p>Bạn có muốn xóa <span style="color: red" *ngIf="facility">{{facility.name}}</span> này không?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+        <button type="button" class="btn btn-primary" (click)="confirm(facility.id)">Có</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
+    Modal Register Form</a>
+</div>
+
+<div class="wpb_wrapper"><h2 style="font-size: 24px;color: #cbbe73;line-height: 36px;text-align: center;font-family:Playfair Display;font-weight:700;font-style:normal;" class="vc_custom_heading">DỊCH VỤ &amp; CƠ SỞ VẬT CHẤT</h2>
+  <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+  <div class="wpb_text_column wpb_content_element ">
+    <div class="wpb_wrapper">
+      <p style="text-align: center;">Có nhiều những gói nghỉ dưỡng phù hợp cho cả những kỳ nghỉ ngắn hay dài ngày</p>
+
+    </div>
+  </div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div>

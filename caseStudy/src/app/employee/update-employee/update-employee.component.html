@@ -90,8 +90,8 @@
 
         <div class="mb-3">
           <label for="examplePosition" class="form-label">Vị Trí</label>
-          <select class="form-select" aria-label="Default select example" name="position" formControlName="position" id="examplePosition" style="margin-left: 10px">
-            <option *ngFor="let p of positionList" [selected]="editEmployeeForm.get('position').value.id == p.id">{{p.namePosition}}</option>
+          <select  class="form-select" aria-label="Default select example" name="position" formControlName="position" id="examplePosition" style="margin-left: 10px">
+            <option [ngValue]="p" *ngFor="let p of positionList" [selected]="editEmployeeForm.get('position').value.id == p.id">{{p.namePosition}}</option>
           </select>
           <!--  <input type="password" class="form-control" id="exampleInputPassword1" >-->
         </div>
@@ -103,7 +103,8 @@
         <div class="mb-3">
           <label for="exampleEducation" class="form-label">Trình Độ</label>
           <select class="form-select" aria-label="Default select example" name="education" formControlName="education" id="exampleEducation" style="margin-left: 10px">
-            <option *ngFor="let e of educationList" [selected]="editEmployeeForm.get('education').value.id == e.id">{{e.nameEducation}}</option>
+            <option [ngValue]="e" *ngFor="let e of educationList" [selected]="editEmployeeForm.get('education').value.id == e.id"
+            >{{e.nameEducation}}</option>
           </select>
           <!--  <input type="password" class="form-control" id="exampleInputPassword1" >-->
         </div>
@@ -114,8 +115,8 @@
 
         <div class="mb-3">
           <label for="exampleDivision" class="form-label">Bộ Phận</label>
-          <select class="form-select" aria-label="Default select example" name="division" formControlName="division" id="exampleDivision" style="margin-left: 10px">
-            <option *ngFor="let d of divisionList" [selected]="editEmployeeForm.get('division').value.id == d.id">{{d.nameDivision}}</option>
+          <select  class="form-select" aria-label="Default select example" name="division" formControlName="division" id="exampleDivision" style="margin-left: 10px">
+            <option [ngValue]="d" *ngFor="let d of divisionList" [selected]="editEmployeeForm.get('division').value.id == d.id">{{d.nameDivision}}</option>
           </select>
           <!--  <input type="password" class="form-control" id="exampleInputPassword1" >-->
         </div>

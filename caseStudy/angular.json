@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "caseStudy"
+    }
+  },
+  "defaultProject": "caseStudy",
+  "cli": {
+    "analytics": "e0cc0c62-223d-42aa-b063-b3c2ac079430"
+  }
 }

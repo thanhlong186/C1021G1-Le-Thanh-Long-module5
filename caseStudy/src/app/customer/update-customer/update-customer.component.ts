@@ -15,6 +15,7 @@ export class UpdateCustomerComponent implements OnInit {
 
   customerTypeList: CustomerType[];
   customerType: CustomerType;
+  customer: ICustomer;
   // listType: CustomerType[];
 
   constructor(private router: Router,
@@ -36,13 +37,13 @@ export class UpdateCustomerComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.customerService.getInfor(this.active.snapshot.params.id).subscribe(data =>{
-        this.editFormCustomer.setValue(data);
-        this.customerType = this.editFormCustomer.get('typeCustomer').value;
-      console.log(data);
-    });
     this.customerService.getListTypeCustomer().subscribe(data => {
         this.customerTypeList = data;
+      this.customerService.getInfor(this.active.snapshot.params.id).subscribe(data =>{
+        this.editFormCustomer.setValue(data);
+        this.customerType = this.editFormCustomer.get('typeCustomer').value;
+        console.log(data);
+      });
     });
   }
   checkAge(dayOfBirth: AbstractControl) {
@@ -59,15 +60,13 @@ export class UpdateCustomerComponent implements OnInit {
     return null;
   }
   updateCustomer() {
-    for(let employee of this.customerTypeList) {
-      if (employee[id] == id){
-
-      }
-    }
     this.customerService.updateCustomer(this.active.snapshot.params.id, this.editFormCustomer.value).subscribe(data =>{
+      // this.active.snapshot.params.id, this.editFormCustomer.value
       console.log("đã cập nhập dữ liệu");
       this.router.navigateByUrl("customer");
-      this._snackBar.open("Đã cập nhập thành công");
+      this._snackBar.open("Đã cập nhập thành công", '', {
+        duration:2000
+      });
     })
   }
   getAllCustomerType() {

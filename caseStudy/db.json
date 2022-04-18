@@ -18,24 +18,24 @@
       "emails": "KhanhLe@gmail.com",
       "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
       "typeCustomer": {
-        "id": 3,
-        "nameType": "Gold"
+        "id": 4,
+        "nameType": "Silver"
       }
     },
     {
       "id": 3,
       "code": "KH-0002",
-      "name": "Hồ Hiếu Nghĩa",
+      "name": "Hồ Hiếu Nghĩa Trần",
       "dayOfBirth": "1987-04-14",
       "gender": "Nam",
       "idCard": "0480945145",
       "phone": "0905489532",
       "emails": "HieuHo@gmail.com",
+      "address": "Số 120, đường Tôn Đản, Đà Nẵng",
       "typeCustomer": {
-        "id": 1,
-        "nameType": "Diamond"
-      },
-      "address": "Số 120, đường Tôn Đản, Đà Nẵng"
+        "id": 3,
+        "nameType": "Gold"
+      }
     },
     {
       "id": 4,
@@ -55,14 +55,17 @@
     {
       "id": 5,
       "code": "KH-0004",
-      "name": "Hồ Hiếu Trọng Trần",
+      "name": "Hồ Hiếu Trọng Trần Trinh",
       "dayOfBirth": "1987-04-14",
       "gender": "Nam",
       "idCard": "0480945145",
       "phone": "0905489532",
       "emails": "HieuHo@gmail.com",
       "address": "Số 120, đường Trường Chinh, Đà Nẵng",
-      "typeCustomer": 5
+      "typeCustomer": {
+        "id": 3,
+        "nameType": "Gold"
+      }
     },
     {
       "id": 6,
@@ -73,11 +76,11 @@
       "idCard": "0480945145",
       "phone": "0905489532",
       "emails": "HieuTinh@gmail.com",
+      "address": "Số 160, đường Cù Chính Lan, TP.HCM",
       "typeCustomer": {
-        "id": 1,
-        "nameType": "Diamond"
-      },
-      "address": "Số 160, đường Cù Chính Lan, TP.HCM"
+        "id": 3,
+        "nameType": "Gold"
+      }
     },
     {
       "code": "KH-0006",
@@ -111,36 +114,6 @@
     },
     {
       "code": "KH-0009",
-      "name": "Micheal John",
-      "dayOfBirth": "1988-02-11",
-      "gender": "nam",
-      "idCard": "048001774",
-      "phone": "0905432567",
-      "emails": "JohnMicheal@gmail.com",
-      "address": "Australia",
-      "typeCustomer": {
-        "id": 1,
-        "nameType": "Diamond"
-      },
-      "id": 10
-    },
-    {
-      "id": 11,
-      "code": "KH-0009",
-      "name": "Micheal John Hell",
-      "dayOfBirth": "1900-04-08",
-      "gender": "nam",
-      "idCard": "048001774",
-      "phone": "0352960270",
-      "emails": "JohnMicheal@gmail.com",
-      "address": "Đà Nẵng,  Việt Nam",
-      "typeCustomer": {
-        "id": 2,
-        "nameType": "Platinum"
-      }
-    },
-    {
-      "code": "KH-0009",
       "name": "Pham Duy Tuan",
       "dayOfBirth": "1987-04-14",
       "gender": "nam",
@@ -153,6 +126,36 @@
         "nameType": "Diamond"
       },
       "id": 12
+    },
+    {
+      "code": "KH-0010",
+      "name": "Jackie Nguyen",
+      "dayOfBirth": "2000-02-14",
+      "gender": "Nam",
+      "idCard": "048098712",
+      "phone": "0890532145",
+      "emails": "JackieNguyen2@gmail.com",
+      "address": "England",
+      "typeCustomer": {
+        "id": 1,
+        "nameType": "Diamond"
+      },
+      "id": 13
+    },
+    {
+      "code": "KH-0011",
+      "name": "Tasuke Honda",
+      "dayOfBirth": "1990-04-12",
+      "gender": "Nam",
+      "idCard": "048009874",
+      "phone": "0890532145",
+      "emails": "Honda@gmail.com",
+      "address": "Nhật Bản",
+      "typeCustomer": {
+        "id": 3,
+        "nameType": "Gold"
+      },
+      "id": 14
     }
   ],
   "customerTypeList": [
@@ -185,10 +188,19 @@
       "idCard": "048013564",
       "phone": "0890167542",
       "email": "KhanhLe@gmail.com",
-      "salary": "20000000",
-      "position": "Giám sát",
-      "education": "Sau Đại học",
-      "division": "Phục vụ"
+      "salary": "20",
+      "position": {
+        "id": 2,
+        "namePosition": "Phục vụ"
+      },
+      "education": {
+        "id": 2,
+        "nameEducation": "Cao đẳng"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      }
     },
     {
       "id": 3,
@@ -197,17 +209,17 @@
       "idCard": "048096753",
       "phone": "0903632754",
       "email": "Thangbui95@gmail.com",
-      "salary": 20000000,
+      "salary": "200",
       "position": {
-        "id": 5,
-        "namePosition": "Quản lý"
+        "id": 1,
+        "namePosition": "Lễ tân"
       },
       "education": {
-        "id": 3,
-        "nameEducation": "Đại học"
+        "id": 4,
+        "nameEducation": "Sau Đại học"
       },
       "division": {
-        "id": 3,
+        "id": 4,
         "nameDivision": "Quản lý"
       }
     },
@@ -336,6 +348,48 @@
         "nameDivision": "Hành chính"
       },
       "id": 10
+    },
+    {
+      "name": "Jorginho",
+      "dayOfBirth": "1984-05-03",
+      "idCard": "048009874",
+      "phone": "0890532145",
+      "email": "Jog@gmail.com",
+      "salary": "2000000",
+      "position": {
+        "id": 5,
+        "namePosition": "Quản lý"
+      },
+      "education": {
+        "id": 3,
+        "nameEducation": "Đại học"
+      },
+      "division": {
+        "id": 2,
+        "nameDivision": "Hành chính"
+      },
+      "id": 11
+    },
+    {
+      "name": "lê thành long",
+      "dayOfBirth": "1985-04-23",
+      "idCard": "048009874",
+      "phone": "+84123456789",
+      "email": "longthanhle123@gmail.com",
+      "salary": "1000000",
+      "position": {
+        "id": 2,
+        "namePosition": "Phục vụ"
+      },
+      "education": {
+        "id": 2,
+        "nameEducation": "Cao đẳng"
+      },
+      "division": {
+        "id": 1,
+        "nameDivision": "Sale-Marketing"
+      },
+      "id": 12
     }
   ],
   "positionList": [
@@ -398,6 +452,89 @@
     {
       "id": 4,
       "nameDivision": "Quản lý"
+    }
+  ],
+  "FacilityList": [
+    {
+      "id": 1,
+      "name": "OCEAN SUITE",
+      "area": 85.8,
+      "cost": 500,
+      "maxPeopleAmount": 5,
+      "rentalType": "ngày",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 2,
+      "name": "OCEAN STUDIO SUITE",
+      "area": 40.1,
+      "cost": 500,
+      "maxPeopleAmount": 5,
+      "rentalType": "Tháng",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 3,
+      "name": "OCEAN DELUXE",
+      "area": 43.7,
+      "cost": 500,
+      "maxPeopleAmount": 5,
+      "rentalType": "Năm",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
+    },
+    {
+      "id": 4,
+      "name": "LANGOON SUPERIOR",
+      "area": 40.1,
+      "cost": 500,
+      "maxPeopleAmount": 3,
+      "rentalType": "ngày",
+      "img": "https://resortdanang.info/wp-content/uploads/2018/12/twins-bed-lagoon-superior-furama-da-nang-1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "GARDEN SUPERIOR",
+      "area": 40.1,
+      "cost": 1,
+      "maxPeopleAmount": 5,
+      "rentalType": "Tháng",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Garden-Superior-TwinBed-1_M2-1047x563.jpg"
+    },
+    {
+      "id": 6,
+      "name": "GARDEN DELUXE",
+      "area": 83.7,
+      "cost": 500,
+      "maxPeopleAmount": 6,
+      "rentalType": "Năm",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M2-1047x563.jpg"
+    },
+    {
+      "id": 7,
+      "name": "PRESIDENTIAL SUITE",
+      "area": 130,
+      "cost": 500,
+      "maxPeopleAmount": 6,
+      "rentalType": "Năm",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-M-1047x563.jpg"
+    },
+    {
+      "id": 8,
+      "name": "BEACH FRONT VILLAS",
+      "area": 900,
+      "cost": 500,
+      "maxPeopleAmount": 10,
+      "rentalType": "Năm",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas-_Exterior-1-F-871x563.jpg"
+    },
+    {
+      "id": 9,
+      "name": "POOL VILLAS",
+      "area": 320,
+      "cost": 500,
+      "maxPeopleAmount": 5,
+      "rentalType": "Năm",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-1047x563.jpg"
     }
   ]
 }

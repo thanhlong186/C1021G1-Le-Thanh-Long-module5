@@ -12,6 +12,8 @@ export class ListCustomerComponent implements OnInit {
   customerList: ICustomer[];
   customer: ICustomer;
   p: number = 1;
+  // searchName: any = "";
+  // customers: any = [];
 
   constructor(private customerService: ServiceCustomer) {
   }
@@ -25,7 +27,7 @@ export class ListCustomerComponent implements OnInit {
     this.customerService.getListCustomer().subscribe(data => {
       this.customerList = data;
       console.log(data);
-      console.log('da lay duoc datafghg');
+      console.log('da lay duoc data');
     }, error => {
       console.log('co loi khi lay data');
     });
@@ -42,4 +44,18 @@ export class ListCustomerComponent implements OnInit {
     })
   }
 
+  searchByName(value) {
+    this.customerService.searchCustomer(value).subscribe(data => {
+      this.customerList = data;
+      console.log(this.customerList);
+      this.p=1;
+    });
+  }
+  searchAll(type, code) {
+    this.customerService.searchAllCustomer(type, code).subscribe(data => {
+      this.customerList =data;
+      console.log(this.customerList);
+      this.p = 1;
+    })
+  }
 }

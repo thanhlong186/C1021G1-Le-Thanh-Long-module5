@@ -1,6 +1,28 @@
 <h1>DANH SÁCH KHÁCH HÀNG</h1>
 
-  <a class="btn btn-success" routerLink="/create-customer" style="margin-left: 1200px; margin-bottom: 10px">Thêm mới Khách Hàng</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input style="height: 50px" class="form-control me-2" #element type="text" placeholder="Tìm kiếm theo tên"
+             aria-label="Search"/>
+<!--      <input style="height: 50px" class="form-control me-2" #code type="text" placeholder="Search By Name"-->
+<!--             aria-label="Search" />-->
+      <button style="width: 40%; height: 40px" class="btn btn-outline-success my-2 my-sn-0" type="button"
+              (click)="searchByName(element.value)"><mat-icon>search</mat-icon>
+      </button>
+    </form>
+    <form class="d-flex">
+      <input style="height: 50px" class="form-control me-2" #type type="text" placeholder="Tìm kiếm loại KH "
+             aria-label="Search"/>
+            <input style="height: 50px" class="form-control me-2" #code type="text" placeholder="Tìm kiếm mã KH"
+                   aria-label="Search" />
+      <button style="width: 50%; height: 40px" class="btn btn-outline-success my-2 my-sn-0" type="button"
+              (click)="searchAll(type.value, code.value)">Tìm Kiếm
+      </button>
+    </form>
+  </div>
+  <a class="btn btn-success" routerLink="/create-customer" style="margin-right: 20px; width: 150px"><mat-icon>create</mat-icon>Thêm mới</a>
+</nav>
 
 <table class="table table-striped table-hover" border="1">
   <thead>
@@ -20,8 +42,8 @@
   <tbody>
   <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 5, currentPage: p }">
     <td>{{customer.code}}</td>
-    <td>{{customer.name}}</td>
-    <td>{{customer.dayOfBirth}}</td>
+    <td>{{customer.name | titlecase}}</td>
+    <td>{{customer.dayOfBirth | date:"dd-MM-yyyy"}}</td>
     <td>{{customer.gender}}</td>
     <td>{{customer.idCard}}</td>
     <td>{{customer.phone}}</td>
@@ -29,13 +51,16 @@
     <td>{{customer.address}}</td>
     <td>{{customer.typeCustomer.nameType}}</td>
     <td>
-<!--    <a class="m-2 btn btn-success">Chi Tiết</a>-->
+      <!--    <a class="m-2 btn btn-success">Chi Tiết</a>-->
       <!--    <a class="m-2 btn btn-primary">Sửa</a>-->
-    <a class="m-2 btn btn-primary" routerLink="/edit-customer/{{customer.id}}">Sửa</a>
+      <a class="m-2 btn btn-primary" routerLink="/edit-customer/{{customer.id}}">
+         <mat-icon>edit</mat-icon>Sửa
+      </a>
       <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
-               style="margin-left: 5px" (click)="getInfor(customer.id)">Xóa</button>
+              style="margin-left: 5px" (click)="getInfor(customer.id)"><mat-icon>delete</mat-icon>Xóa
+      </button>
     </td>
-<!--    onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'"-->
+    <!--    onclick="'javascript:deleteCustomer(' + ${customer.id} + ')'"-->
   </tr>
   </tbody>
 </table>
@@ -53,7 +78,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer.id)">Có</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteCustomer(customer.id)">Có
+        </button>
       </div>
     </div>
   </div>

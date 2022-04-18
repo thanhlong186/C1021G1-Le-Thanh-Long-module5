@@ -5,6 +5,7 @@ import {EducationDegreeList} from '../model/EducationDegreeList';
 import {DivisionList} from '../model/DivisionList';
 import {EmployeeServiceService} from '../employee-service.service';
 import {Router} from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create-employee',
@@ -17,7 +18,8 @@ export class CreateEmployeeComponent implements OnInit {
   educationType: EducationDegreeList[];
   divisionType: DivisionList[];
 
-  constructor(private employeeService: EmployeeServiceService, private router: Router) { }
+  constructor(private employeeService: EmployeeServiceService, private router: Router,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getPositionType();
@@ -73,7 +75,10 @@ export class CreateEmployeeComponent implements OnInit {
     if (!this.createEmployeeForm.invalid) {
       this.employeeService.createEmployee(this.createEmployeeForm.value).subscribe( () =>{
         console.log("Đã lấy được data");
-        this.router.navigateByUrl("employee")
+        this.router.navigateByUrl("employee");
+        this.snackBar.open("Đã thêm mới thành công", '', {
+          duration:2000
+        });
       });
       console.log(this.createEmployeeForm.value);
     }
